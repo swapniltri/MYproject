@@ -30,12 +30,15 @@ table tr td{
     padding: 1rem;
     font-size: 1.2rem;
     box-sizing: border-box;
+    transition: all 0.1s ease-in-out;
 }
 
 table tr td:nth-of-type(even):hover{
     color: rgb(219, 124, 16);
+    transform: scale(1.2);
 }
 
 table tr td:nth-of-type(odd):hover{
     color: rgb(10, 138, 243);
+    transform: scale(1.2);
 }
