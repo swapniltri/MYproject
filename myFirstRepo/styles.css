@@ -3,9 +3,14 @@ body {
 }
 
 h1 {
-    color:blue;
+    color:white;
 }
-
+h2{
+    color: aliceblue;
+}
+h3{
+    color: dimgray
+}
 table {
     margin:0 auto 0 auto;
 }
