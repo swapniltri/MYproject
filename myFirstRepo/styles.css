@@ -1,10 +1,26 @@
-body {
-    text-align:center;
+body{
+    font-family: "Montserrat";
+    text-align: center;
+    font-weight: 10;
 }
 
-h1 {
+h1{
     color:blue;
+    font-family:"Montserrat-black" ;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 5%;
+    padding-top: 30px;
+    line-height: 1.5;
 }
+h2{
+  color:red;
+}
+table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 15px;
+        }
 
 table {
     margin:0 auto 0 auto;
