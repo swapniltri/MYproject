@@ -5,47 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
+    <!-- <style type="text/css">
+      body {
+  font-family: "lato", sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.responsive-table li {
+  border-radius: 3px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.responsive-table .table-header {
+  background-color: #95a5a6;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.responsive-table .table-row {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.responsive-table .col-2 {
+  flex-basis: 40%;
+}
+.responsive-table .col-4 {
+  flex-basis: 25%;
+}
+@media all and (max-width: 767px) {
+  .responsive-table .table-header {
+    display: none;
+  }
+  .responsive-table li {
+    display: block;
+  }
+  .responsive-table .col {
+    flex-basis: 100%;
+  }
+  .responsive-table .col {
+    display: flex;
+    padding: 10px 0;
+  }
+  .responsive-table .col:before {
+    color: #6c7a89;
+    padding-right: 10px;
+    content: attr(data-label);
+    flex-basis: 50%;
+    text-align: right;
+  }
+}
+
+    </style> -->
 </head>
 <body>
     <h1>Hi! I'm Swapnil</h1>
     <p>Just to make this page Interesting</p>
-    <table>
-        <tr>
-            <th>IPL Teams</th>
-            <th>Captain</th>
-        </tr>
-        <tr>
-            <td>Mumbai Indians</td>
-            <td>Rohit Sharma</td>
-        </tr>
-        <tr>
-            <td>Chennai Super Kings</td>
-            <td>MS Dhoni</td>
-        </tr>
-        <tr>
-            <td>Royal Challengers Bangalore</td>
-            <td>Virat Kohli</td>
-        </tr>
-        <tr>
-            <td>Sunrises Hyderabad</td>
-            <td>David Warner</td>
-        </tr>
-        <tr>
-            <td>Rajasthan Royals</td>
-            <td>Steven Smith</td>
-        </tr>
-        <tr>
-            <td>Kolkata Knight Riders</td>
-            <td>Dinesh Kartik</td>
-        </tr>
-        <tr>
-            <td>Delhi Capitals</td>
-            <td>Shreyas Iyer</td>
-        </tr>
-        <tr>
-            <td>Kings XI Punjab</td>
-            <td>KL Rahul</td>
-        </tr>
-    </table>
+    <div class="container">
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-2"> IPL Teams</div>
+      <div class="col col-4"> Captains</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-2" data-label="Customer Name">Mumbai Indians</div>
+      <div class="col col-4" data-label="Payment Status">Rohit Sharma</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-2" data-label="Customer Name"> Chennai Super Kings</div>
+      
+      <div class="col col-4" data-label="Payment Status">Mahendra Singh Dhoni</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-2" data-label="Customer Name">Royal Challengers Bangalore</div>
+      <div class="col col-4" data-label="Payment Status">Virat Kohli</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-2" data-label="Customer Name">Sunrises Hyderabad</div>
+      
+      <div class="col col-4" data-label="Payment Status">David Warner</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-2" data-label="Customer Name">Rajasthan Royals</div>
+      <div class="col col-4" data-label="Payment Status">Steven Smith</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-2" data-label="Customer Name">Kolkata Knight Riders</div>
+      
+      <div class="col col-4" data-label="Payment Status">Dinesh kartik</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-2" data-label="Customer Name">Delhi Capitals</div>
+      <div class="col col-4" data-label="Payment Status">Shreyas Iyer</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-2" data-label="Customer Name">Kings XI Punjab	</div>
+      
+      <div class="col col-4" data-label="Payment Status">KL Rahul</div>
+    </li>
+  </ul>
+</div>
 </body>
 </html>
