@@ -7,5 +7,54 @@ h1 {
 }
 
 table {
-    margin:0 auto 0 auto;
+	    border-collapse: collapse;
+   		width: 600px;
+   		font-family: "Courier New", Courier, monospace;
+   		font-weight: bold;
+   		font-size: 70%;
+	}
+
+	
+	th {
+		background: #808000; /* Olive */
+		color: #FFFFFF; /* White */
+	    border: 2px solid #FFFFFF; /* White */
+		background-image: url('http://www.photos-public-domain.com/wp-content/uploads/2011/03/olive-green-parchment-paper-texture.jpg');
+   		background-repeat: no-repeat;
+	}
+
+
+	
+	td {
+		background: #E0FFFF; /* LightCyan */
+		color: #808080; /* Gray */
+		border: 2px solid #FFFFFF;
+		text-align: center;
+	}
+	table{
+		margin:auto;
+	}
+
+	 td, th {
+	    margin-left: 5%;
+	    padding: 1%;
+	}
+
+	
+	tr th:first-child, tr td:first-child {
+		text-align: left;
+	}
+
+	
+	tr td {
+		opacity: 0.8;
+
+	}
+
+	
+	tr td:hover {
+		opacity: 1.5;
+		text-align: center;
+		font-size: 120%;
+	}
 }
