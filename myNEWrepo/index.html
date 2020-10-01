@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>IPL Teams List</h1>
+    
+  
+
+
+
+    <div class="card">
+  <div class="slides">
+    <div slide-id="1" slide-color="#f9d100" class="slide active">
+      <div class="thumbnail"><img src="https://newsd.in/wp-content/uploads/2018/12/wp2496943.jpg" class="img" /></div>
+      <h1 class="title">Chennai Super Kings</h1>
+      <p class="description">Captain : MS Dhoni </p>
+    </div>
+    <div slide-id="2" slide-color="blue" class="slide">
+      <div class="thumbnail"><img src="https://2.bp.blogspot.com/-NzblJwRBDwU/UN2D0xygjjI/AAAAAAAAAXo/70Bs6UYg_qY/w1200-h630-p-k-no-nu/mumbai-indians-cricket-ipl-logo.png" class="img" /></div>
+      <h1 class="title">Mumbai Indians</h1>
+      <p class="description">Captain : Rohit Sharma </p>
+    </div>
+    <div slide-id="3" slide-color="red" class="slide">
+      <div class="thumbnail"><img src="https://www.exchange4media.com/news-photo/1522669678_228yEn_RCB_FINAL.jpg" class="img" /></div>
+      <h1 class="title">Royal Challengers Bangalore</h1>
+      <p class="description">Captain : Virat Kohli</p>
+    </div>
+    <div slide-id="4" slide-color="#d07322" class="slide">
+      <div class="thumbnail"><img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201302/sunrisers-660_020413102919.jpg" class="img" /></div>
+      <h1 class="title">Sunrises Hyderabad</h1>
+      <p class="description"> Captain : David Warner</p>
+    </div>
+    <div slide-id="5" slide-color="#f39cab" class="slide">
+      <div class="thumbnail"><img src="https://images-na.ssl-images-amazon.com/images/I/71ZaXpyo3XL._SL1500_.jpg" class="img" /></div>
+      <h1 class="title">Rajasthan Royals</h1>
+      <p class="description">Captain : Steven Smith</p>
+    </div>
+     <div slide-id="6" slide-color="#67377e" class="slide">
+      <div class="thumbnail"><img src="https://www.cricadium.com/wp-content/uploads/2019/12/Untitled-design-7-1-1.jpg" class="img" /></div>
+      <h1 class="title">Kolkata Knight Riders</h1>
+      <p class="description">Captain : Dinesh Kartik</p>
+    </div>
+     <div slide-id="7" slide-color="#385d80" class="slide">
+      <div class="thumbnail"><img src="https://bizbehindsports.com/wp-content/uploads/2020/08/dd.jpg" class="img" /></div>
+      <h1 class="title">Delhi Capitals</h1>
+      <p class="description">Captain : Shreyas Iyer</p>
+    </div>
+     <div slide-id="8" slide-color="grey" class="slide">
+      <div class="thumbnail"><img src="https://i.pinimg.com/originals/0d/5b/41/0d5b41629f44b0c1093cc3e46b2735c8.png" class="img" /></div>
+      <h1 class="title">Kings XI Punjab</h1>
+      <p class="description">Captain : KL Rahul</p>
+    </div>
+  </div>
+  <div class="footer"><a id="prev" href="#" ripple="" ripple-color="#666666" class="btn">Prev</a><a id="next" href="#" ripple="" ripple-color="#666666" class="btn">Next</a></div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+  var getslideHeight = $('.slide.active').height();
+
+  $('.slides').css({
+    height: getslideHeight
+  });
+
+  function calcslideHeight() {
+    getslideHeight = $('.slide.active').height();
+
+    $('.slides').css({
+      height: getslideHeight
+    });
+  }
+
+  function animateContentColor() {
+    var getslideColor = $('.slide.active').attr('slide-color');
+
+    $('body').css({
+      background: getslideColor
+    });
+
+    $('.title').css({
+      color: getslideColor
+    });
+
+    $('.btn').css({
+      color: getslideColor
+    });
+  }
+
+  var slideItem = $('.slide'),
+    slideCurrentItem = slideItem.filter('.active');
+
+  $('#next').on('click', function(e) {
+    e.preventDefault();
+
+    var nextItem = slideCurrentItem.next();
+
+    slideCurrentItem.removeClass('active');
+
+    if (nextItem.length) {
+
+      slideCurrentItem = nextItem.addClass('active');
+    } else {
+      slideCurrentItem = slideItem.first().addClass('active');
+    }
+
+    calcslideHeight();
+    animateContentColor();
+  });
+
+  $('#prev').on('click', function(e) {
+    e.preventDefault();
+
+    var prevItem = slideCurrentItem.prev();
+
+    slideCurrentItem.removeClass('active');
+
+    if (prevItem.length) {
+      slideCurrentItem = prevItem.addClass('active');
+    } else {
+      slideCurrentItem = slideItem.last().addClass('active');
+    }
+
+    calcslideHeight();
+    animateContentColor();
+  });
+
+  // Ripple
+  $('[ripple]').on('click', function(e) {
+    var rippleDiv = $('<div class="ripple" />'),
+      rippleSize = 60,
+      rippleOffset = $(this).offset(),
+      rippleY = e.pageY - rippleOffset.top,
+      rippleX = e.pageX - rippleOffset.left,
+      ripple = $('.ripple');
+
+    rippleDiv.css({
+      top: rippleY - (rippleSize / 2),
+      left: rippleX - (rippleSize / 2),
+      background: $(this).attr("ripple-color")
+    }).appendTo($(this));
+
+    window.setTimeout(function() {
+      rippleDiv.remove();
+    }, 1900);
+  });
+});
+</script>
+
+</body>
+</html>
